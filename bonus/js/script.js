@@ -22,8 +22,6 @@ Ragionamento Base:
   se le condizioni precedenti non si verificano stampo il numero corrente 
 */
 
-const rowElement = document.querySelector(".row")
-
 for (let i = 1; i <= 100; i++) {
   let currentLog
   let bgColor = "#1389b2"
@@ -44,16 +42,13 @@ for (let i = 1; i <= 100; i++) {
 }
 
 function renderHtml(currentLog, bgColor) {
-  const numberContainer = document.createElement("div")
-  numberContainer.classList.add(
-    "col-3",
-    "col-md-2",
-    "col-lg-1",
-    "number-container",
-    "border",
-    "text-center"
-  )
-  numberContainer.style.backgroundColor = bgColor
-  numberContainer.innerHTML = currentLog
-  rowElement.append(numberContainer)
+  const rowElement = document.querySelector(".row")
+  const numberContainer = `
+    <div class="col-3 col-md-2">
+      <div style="background-color:${bgColor}" class="number-container border text-center">
+        ${currentLog}
+      </div>
+    </div>
+  `
+  rowElement.innerHTML += numberContainer
 }

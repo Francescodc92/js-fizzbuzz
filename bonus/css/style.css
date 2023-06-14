@@ -6,8 +6,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  background-color: #083b4c;
+}
+
 .number-container {
   height: 3.75rem;
   line-height: 3.75rem;
   vertical-align: middle;
+  font-weight: 600;
 }
