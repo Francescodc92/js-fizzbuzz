@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.number-container {
+  height: 3.75rem;
+  line-height: 3.75rem;
+  vertical-align: middle;
+}
