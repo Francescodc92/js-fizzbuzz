@@ -22,27 +22,37 @@ Ragionamento Base:
   se le condizioni precedenti non si verificano stampo il numero corrente 
 */
 
-for (let i = 1; i <= 100; i++) {
-  let currentLog
-  let bgColor = "#1389b2"
-  if (i % 5 == 0 && i % 3 == 0) {
-    currentLog = "FizzBuzz"
-    bgColor = "#f0466f"
-  } else if (i % 5 == 0) {
-    currentLog = "Buzz"
-    bgColor = "#ffd166"
-  } else if (i % 3 == 0) {
-    currentLog = "Fizz"
-    bgColor = "#0cd6a1"
-  } else {
-    currentLog = i
-  }
+const rowElement = document.querySelector(".row")
 
-  renderHtml(currentLog, bgColor)
-}
+const formElement = document.querySelector("form#form")
+formElement.addEventListener("submit", (e) => {
+  rowElement.innerHTML = ""
+  e.preventDefault()
+  const numberCards = document.querySelector("#number-cards")
+  const valueNumber = Number(numberCards.value)
+  if (valueNumber != NaN) {
+    for (let i = 1; i <= valueNumber; i++) {
+      let currentLog
+      let bgColor = "#1389b2"
+      if (i % 5 == 0 && i % 3 == 0) {
+        currentLog = "FizzBuzz"
+        bgColor = "#f0466f"
+      } else if (i % 5 == 0) {
+        currentLog = "Buzz"
+        bgColor = "#ffd166"
+      } else if (i % 3 == 0) {
+        currentLog = "Fizz"
+        bgColor = "#0cd6a1"
+      } else {
+        currentLog = i
+      }
+
+      renderHtml(currentLog, bgColor)
+    }
+  }
+})
 
 function renderHtml(currentLog, bgColor) {
-  const rowElement = document.querySelector(".row")
   const numberContainer = `
     <div class="col-3 col-md-2">
       <div style="background-color:${bgColor}" class="number-container border text-center">

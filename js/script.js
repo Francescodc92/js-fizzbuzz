@@ -23,15 +23,13 @@ Ragionamento Base:
 */
 
 for (let i = 1; i <= 100; i++) {
-  let currentLog
+  let currentLog = i
   if (i % 5 == 0 && i % 3 == 0) {
     currentLog = "FizzBuzz"
   } else if (i % 5 == 0) {
     currentLog = "Buzz"
   } else if (i % 3 == 0) {
     currentLog = "Fizz"
-  } else {
-    currentLog = i
   }
 
   console.log(currentLog)

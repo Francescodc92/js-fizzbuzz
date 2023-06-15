@@ -17,7 +17,26 @@
   <body>
     <div class="container">
       <h1 class="text-center fw-bold text-light">FizzBuzzDOM</h1>
-      <div class="row g-4 mt-3"></div>
+
+      <form id="form" method="get">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label text-light">
+            scegli il numero di caselle
+          </label>
+          <input
+            type="number"
+            class="form-control"
+            id="number-cards"
+            aria-describedby="emailHelp"
+          />
+          <div id="emailHelp" class="form-text text-light">
+            scegli solo numeri interi
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Invia</button>
+      </form>
+
+      <div class="row g-4 my-3"></div>
       <!--end row-->
     </div>
     <!--end container-->
